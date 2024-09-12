@@ -39,13 +39,13 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'angular-18' title`, () => {
-    expect(app.title).toEqual('angular-18');
+  it(`should have the 'douala-city' title`, () => {
+    expect(app.title).toEqual('douala-city');
   });
 
   it('should render title', () => {
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, angular-18');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, douala-city');
   });
 });

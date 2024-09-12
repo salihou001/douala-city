@@ -1,3 +1,88 @@
-<div class="super-container w-screen h-screen bg-rose-400 flex items-center justify-center">
-    <p class="text-3xl text-white">Ngoka we are waiting you...!</p>
+<div class="super-container w-screen">
+    <!-- header start -->
+    <header class="w-full flex items-center justify-around h-[100px]">
+        <div class="header_left-block flex items-center gap-2">
+            <div class="flex items-center justify-center px-[20px] py-[10px] rounded-[100px] bg-[#F4F4F4] cursor-pointer">explore the city</div>
+            <div class="flex items-center justify-center px-[20px] py-[10px] rounded-[100px] bg-[#007F73] cursor-pointer text-[19.3px] leading-[23.16px] font-[400] text-white">Discover our events</div>
+        </div>
+        <div class="header_logo h-[38px] w-[195.66px] object-cover">
+            <img src="Group 1.svg" alt="logo">
+        </div>
+        <div class="header_right-block">
+            
+            <div class="header_left-block flex items-center gap-2">
+                <div class="flex items-center justify-center px-[20px] py-[10px] rounded-[100px] bg-[#F4F4F4] cursor-pointer">Book your hotel</div>
+                <div class="h-[45px] w-[45px] rounded-full bg-[#F4F4F4] flex items-center justify-center cursor-pointer">
+                    <img class="w-[23px] h-[23px]" src="Group 2.svg" alt="menu burger">
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <!-- section hero start -->
+    <section class="hero grid grid-cols-3 mb-[200px]">
+        <div class="border-b border-[#A8A8A8] col-span-2 relative h-[130px]">
+            <!-- arret start -->
+            <span class="absolute -right-[2px] top-0 w-[3px] h-[3px] bg-[#A8A8A8] rounded-full"></span>
+            <span class="absolute -right-[2px] -bottom-[2px] w-[3px] h-[3px] bg-[#A8A8A8] rounded-full"></span>
+            <!-- arret end -->
+
+            <!-- start text zone -->
+             <section class="flex flex-col items-end justify-end h-full pb-2">
+                <h1 class="text-top flex items-center justify-end">
+                    <div class="first font-[700] text-[45px] whitespace-nowrap leading-[45.81px]">
+                        @for (item of douala; track $index) {
+                            <span class="chart inline-block">{{item}}</span>
+                        }
+                    </div>
+                    <div class="second mx-2 start">
+                        <img class="h-[35px] w-[35px] object-contain" src="Star 1 (1).svg" alt="start">
+                    </div>
+                    <div class="third font-[700] text-[45px] whitespace-nowrap leading-[45.81px] flex items-center gap-[5px]">
+                        <div class="first font-[700] text-[45px] whitespace-nowrap leading-[45.81px]">
+                            @for (item of the; track $index) {
+                                <span class="chart inline-block">{{item}}</span>
+                            }
+                        </div>
+                        <div class="first font-[700] text-[45px] whitespace-nowrap leading-[45.81px]">
+                            @for (item of beating; track $index) {
+                                <span class="chart inline-block">{{item}}</span>
+                            }
+                        </div>
+                        <div class="first font-[700] text-[45px] whitespace-nowrap leading-[45.81px]">
+                            @for (item of heart; track $index) {
+                                <span class="chart inline-block">{{item}}</span>
+                            }
+                        </div>
+                        <div class="first font-[700] text-[45px] whitespace-nowrap leading-[45.81px]">
+                            @for (item of of; track $index) {
+                                <span class="chart inline-block">{{item}}</span>
+                            }
+                        </div>
+                        <span class="text-[#A8A8A8] font-[300] mx-2">
+                            @for (item of cameroon; track $index) {
+                                <span class="chart inline-block">{{item}}</span>
+                            }
+                        </span>
+                    </div>
+                 </h1>
+                 <h5 class="self-start pl-[65px] text-bottom font-[400] text-[31px] leading-[37.2px] text-[#A8A8A8]">
+                    discover our cultural and natural riches.
+                 </h5>
+             </section>
+            <!-- end text zone -->
+        </div>
+        <div class="border-l border-[#A8A8A8] row-span-3 pr-[45px] pl-[10px] pt-[5px]">
+            <img src="Rectangle 3.svg" alt="photograph">
+        </div>
+        <div class="border-r border-[#A8A8A8] row-span-2 relative pl-[45px] pt-[10px] pr-[10px]">
+            <img src="Rectangle 1.svg" alt="photograph">
+            <span class="absolute -right-[2px] -top-[2px] w-[3px] h-[3px] bg-[#A8A8A8] rounded-full"></span>
+        </div>
+        <div class="row-span-2 p-[10px]">
+            <img src="Rectangle 2.svg" alt="photograph">
+        </div>
+    </section>
+    <!-- section hero end -->
 </div>
