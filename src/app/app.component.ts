@@ -109,14 +109,14 @@ export class AppComponent implements OnInit {
     }, "<")
   }
 
-  // moveCursor(e: any) {
-  //   console.log(e.clientX, e.clientY);
+  moveCursor(e: any) {
+    console.log(e.clientX, e.clientY);
 
-  //   gsap.to(".cursor-contain", {
-  //     x: e.clientX - 10 + 'px',
-  //     y: e.clientY - 960 + 'px',
-  //     delay: .1,
-  //   })
-  // }
+    gsap.to(".cursor-contain", {
+      x: e.clientX - 10 + 'px',
+      y: e.clientY - 960 + 'px',
+      delay: .1,
+    })
+  }
 
 }
