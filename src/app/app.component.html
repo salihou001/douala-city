@@ -1,4 +1,4 @@
-<div class="super-container w-screen">
+<div class="super-container w-screen min-h-[1200px]">
     <!-- header start -->
     <header class="w-full flex items-center justify-around h-[100px]">
         <div class="header_left-block flex items-center gap-2">
@@ -30,8 +30,8 @@
 
             <!-- start text zone -->
              <section class="flex flex-col items-end justify-end h-full pb-2">
-                <h1 class="text-top flex items-center justify-end">
-                    <div class="first font-[700] text-[45px] whitespace-nowrap leading-[45.81px]">
+                <h1 class="text-top flex items-center justify-end overflow-hidden min-h-[55px]">
+                    <div class="first font-[700] text-[45px] whitespace-nowrap leading-[32.81px]">
                         @for (item of douala; track $index) {
                             <span class="chart inline-block">{{item}}</span>
                         }
@@ -39,7 +39,7 @@
                     <div class="second mx-2 start">
                         <img class="h-[35px] w-[35px] object-contain" src="Star 1 (1).svg" alt="start">
                     </div>
-                    <div class="third font-[700] text-[45px] whitespace-nowrap leading-[45.81px] flex items-center gap-[5px]">
+                    <div class="third font-[700] text-[45px] whitespace-nowrap leading-[45.81px] flex items-center gap-[8px]">
                         <div class="first font-[700] text-[45px] whitespace-nowrap leading-[45.81px]">
                             @for (item of the; track $index) {
                                 <span class="chart inline-block">{{item}}</span>
@@ -67,22 +67,62 @@
                         </span>
                     </div>
                  </h1>
-                 <h5 class="self-start pl-[65px] text-bottom font-[400] text-[31px] leading-[37.2px] text-[#A8A8A8]">
-                    discover our cultural and natural riches.
+                 <h5 class="self-start pl-[45px] text-bottom font-[400] text-[20px] leading-[37.2px] text-[#A8A8A8] flex items-center gap-[8px] overflow-hidden h-[30px]">
+                    <div>
+                        @for (item of discover; track $index) {
+                            <span class="chart inline-block">{{item}}</span>
+                        }
+                    </div>
+                    <div>
+                        @for (item of our; track $index) {
+                            <span class="chart inline-block">{{item}}</span>
+                        }
+                    </div>
+                    <div>
+                        @for (item of cultural; track $index) {
+                            <span class="chart inline-block">{{item}}</span>
+                        }
+                    </div>
+                    <div>
+                        @for (item of and; track $index) {
+                            <span class="chart inline-block">{{item}}</span>
+                        }
+                    </div>
+                    <div>
+                        @for (item of natural; track $index) {
+                            <span class="chart inline-block">{{item}}</span>
+                        }
+                    </div>
+                    <div>
+                        @for (item of riches; track $index) {
+                            <span class="chart inline-block">{{item}}</span>
+                        }
+                    </div>
                  </h5>
              </section>
             <!-- end text zone -->
         </div>
         <div class="border-l border-[#A8A8A8] row-span-3 pr-[45px] pl-[10px] pt-[5px]">
-            <img src="Rectangle 3.svg" alt="photograph">
+            <img class="photograph" src="Rectangle 3.svg" alt="photograph">
         </div>
         <div class="border-r border-[#A8A8A8] row-span-2 relative pl-[45px] pt-[10px] pr-[10px]">
-            <img src="Rectangle 1.svg" alt="photograph">
+            <img class="photograph" src="Rectangle 1.svg" alt="photograph">
             <span class="absolute -right-[2px] -top-[2px] w-[3px] h-[3px] bg-[#A8A8A8] rounded-full"></span>
         </div>
         <div class="row-span-2 p-[10px]">
-            <img src="Rectangle 2.svg" alt="photograph">
+            <img class="photograph" src="Rectangle 2.svg" alt="photograph">
+            <div class="flex items-center justify-center">
+                <div class="relative translate-y-12">
+                    <img class="rotate h-[154.7px] w-[154.7px]" src="Group 4.svg" alt="">
+                    <img class="absolute -bottom-10 left-1/2 z-10 -translate-x-1/2 translate-y-0" src="63143e4e25b46db174b66d70_NewDownArrow 1.svg" alt="">
+                </div>
+            </div>
         </div>
     </section>
     <!-- section hero end -->
+    
 </div>
+<!-- cursor section -->
+ <!-- <div class="cursor-contain h-[50px] w-[50px] rounded-full border-2 border-rose-600 flex items-center justify-center absolute z-50">
+    <div class="cursor w-[4px] h-[4px] rounded-full bg-slate-950"></div>
+ </div> -->

@@ -26,14 +26,20 @@ export class AppComponent implements OnInit {
   heart = ['h', 'e', 'a', 'r', 't'];
   of = ['o', 'f'];
   cameroon = ['C','a','m','e','r','o','o','n'];
+  discover = ['D','i','s','c','o','v','e','r'];
+  our = ['o','u','r'];
+  cultural = ['c','u','l','t','u','r','a','l'];
+  and = ['a','n','d'];
+  natural = ['n','a','t','u','r','a','l'];
+  riches = ['r','i','c','h','e','s'];
   ngOnInit(): void {
-    // const lenis = new Lenis();
-    // lenis.on('scroll', (e: any) => {
-    // })
-    // lenis.on('scroll', ScrollTrigger.update)
-    // gsap.ticker.add((time) => {
-    //   lenis.raf(time * 1000)
-    // })
+    const lenis = new Lenis();
+    lenis.on('scroll', (e: any) => {
+    })
+    lenis.on('scroll', ScrollTrigger.update)
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000)
+    })
     gsap.ticker.lagSmoothing(0);
 
     const TL = gsap.timeline({});
@@ -45,7 +51,7 @@ export class AppComponent implements OnInit {
     }, {
       y: '*',
       stagger: {
-        amount:  .3
+        amount:  1
       },
       scaleX: 1,
       opacity: 1,
@@ -60,23 +66,57 @@ export class AppComponent implements OnInit {
       delay: 1,
       width: 'auto',
       ease: myEase
-    }, "<1")
+    }, "<1.5")
     .fromTo('.start', {
-      scale: 0,
+      scale: -1.5,
     }, {
       scale: 1,
       duration: 1,
       delay: 1,
       ease: 'elastic'
     }, "<1")
-    .fromTo('.start', {
+    .fromTo('.photograph', {
+      clipPath: 'polygon(0 0, 100% 0, 100% 0, 0 0)',
+    }, {
+      duration: 1.5,
+      stagger: {
+        amount:  .5
+      },
+      clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
+      delay: 1,
+      ease: myEase
+    }, "<-1")
+    .fromTo('.rotate', {
+      rotate: 0,
+      y: -24,
+      opacity: 0
+    }, {
+      rotate: 360,
+      y: '*',
+      opacity: 1,
+      duration: 2,
+      ease: myEase
+    }, "<")
+    .fromTo('.start, .rotate', {
       rotate: 0,
     }, {
       rotate: 360,
       duration: 2,
-      delay: 1,
+      yoyo: true,
+      repeat: -1,
+      delay: 2,
       ease: myEase
     }, "<")
   }
+
+  // moveCursor(e: any) {
+  //   console.log(e.clientX, e.clientY);
+
+  //   gsap.to(".cursor-contain", {
+  //     x: e.clientX - 10 + 'px',
+  //     y: e.clientY - 960 + 'px',
+  //     delay: .1,
+  //   })
+  // }
 
 }
