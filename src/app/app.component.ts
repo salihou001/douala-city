@@ -32,7 +32,9 @@ export class AppComponent implements OnInit {
   and = ['a','n','d'];
   natural = ['n','a','t','u','r','a','l'];
   riches = ['r','i','c','h','e','s'];
-  ngOnInit(): void {
+
+  ngOnInit(): void {}
+  ngAfterViewInit(): void {
     const lenis = new Lenis();
     lenis.on('scroll', (e: any) => {
     })
