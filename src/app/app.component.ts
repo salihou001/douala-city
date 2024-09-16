@@ -23,7 +23,7 @@ export class AppComponent implements OnInit {
   douala = ['D', 'o', 'u', 'a', 'l', 'a'];
   the = ['t','h', 'e'];
   beating = ['b','e','a', 't', 'i', 'n', 'g'];
-  heart = ['h', 'e', 'a', 'r', 't'];
+  heart = ['c', 'i', 't', 'y'];
   of = ['o', 'f'];
   cameroon = ['C','a','m','e','r','o','o','n'];
   discover = ['D','i','s','c','o','v','e','r'];
@@ -47,7 +47,7 @@ export class AppComponent implements OnInit {
     .fromTo('.chart', {
       y: '40px',
       opacity: 0,
-      scaleX: -3
+      scaleX: -3.5
     }, {
       y: '*',
       stagger: {
@@ -59,6 +59,51 @@ export class AppComponent implements OnInit {
       delay: 1,
       ease: 'elastic'
     })
+    .fromTo('.arret-1', {
+      opacity: 0,
+    }, {
+      duration: 1,
+      delay: 1,
+      opacity: 1,
+      ease: myEase
+    }, "<")
+    .fromTo('.line-one', {
+      clipPath: 'polygon(0 0, 100% 0, 100% 0, 0 0)',
+    }, {
+      duration: 5,
+      clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
+      ease: myEase
+    }, "<")
+    .fromTo('.arret-2', {
+      opacity: 0,
+    }, {
+      duration: 1,
+      opacity: 1,
+      ease: myEase
+    }, "<2")
+    .fromTo('.arret-3', {
+      opacity: 0,
+    }, {
+      duration: 1,
+      opacity: 1,
+      ease: myEase
+    }, "<2")
+    .fromTo('.line-tree', {
+      scaleX: 0,
+      transformOrigin: 'right right',
+    }, {
+      duration: 3,
+      delay: 1,
+      scale: 1,
+      ease: myEase
+    }, "<-2.5")
+    .fromTo('.line-two', {
+      clipPath: 'polygon(0 0, 100% 0, 100% 0, 0 0)',
+    }, {
+      duration: 1,
+      clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
+      ease: 'sine.out'
+    }, "<1.5")
     .fromTo('.second', {
       width: 0
     }, {
@@ -66,7 +111,7 @@ export class AppComponent implements OnInit {
       delay: 1,
       width: 'auto',
       ease: myEase
-    }, "<1.5")
+    }, "<")
     .fromTo('.start', {
       scale: -1.5,
     }, {
@@ -74,7 +119,7 @@ export class AppComponent implements OnInit {
       duration: 1,
       delay: 1,
       ease: 'elastic'
-    }, "<1")
+    }, "<")
     .fromTo('.photograph', {
       clipPath: 'polygon(0 0, 100% 0, 100% 0, 0 0)',
     }, {
@@ -107,6 +152,13 @@ export class AppComponent implements OnInit {
       delay: 2,
       ease: myEase
     }, "<")
+    .fromTo('.arrow-b', {
+      opacity: 0,
+    }, {
+      opacity: 1,
+      duration: 1,
+      ease: myEase
+    }, "<-1")
   }
 
   moveCursor(e: any) {
